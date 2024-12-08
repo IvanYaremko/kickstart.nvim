@@ -158,7 +158,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- [[ git keymaps ]]
+-- add current file
 vim.keymap.set('n', '<leader>ga', ':!git add %<CR>')
+-- add all files
+vim.keymap.set('n', '<leader>gA', ':!git add .<CR>')
 vim.keymap.set('n', '<leader>gc', ':!git commit -m "update"<CR>')
 vim.keymap.set('n', '<leader>gp', ':!git push<CR>')
 
