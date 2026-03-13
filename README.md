@@ -24,12 +24,12 @@ This is a personal, modular fork of [kickstart.nvim](https://github.com/nvim-lua
 ## Installation
 Linux:
 ```
-git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/IvanYaremko/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 Windows:
 ```
-git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${env:LOCALAPPDATA}\nvim"
+git clone https://github.com/IvanYaremko/kickstart.nvim.git "${env:LOCALAPPDATA}\nvim"
 ```
 
 ## Post Installation
