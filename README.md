@@ -23,16 +23,24 @@ This is a personal, modular fork of [kickstart.nvim](https://github.com/nvim-lua
 
 ## Installation
 Linux:
-`git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
+```
+git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
 
 Windows:
-`git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${env:LOCALAPPDATA}\nvim"`
+```
+git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com/IvanYaremko/kickstart.nvim.git) "${env:LOCALAPPDATA}\nvim"
+```
 
 ## Post Installation
 Linux:
+```
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install make gcc ripgrep unzip git xclip neovim
+```
 
 Windows:
+```
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
+```
