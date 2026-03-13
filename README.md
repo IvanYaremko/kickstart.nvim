@@ -33,14 +33,24 @@ git clone [https://github.com/IvanYaremko/kickstart.nvim.git](https://github.com
 ```
 
 ## Post Installation
-Linux:
 ```
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install make gcc ripgrep unzip git xclip neovim
 ```
 
-Windows:
+
+### Latest neovim
 ```
-choco install -y neovim git ripgrep wget fd unzip gzip mingw make
+1. Download the latest stable release
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+
+2. Make it executable
+chmod u+x nvim-linux-x86_64.appimage
+
+3. Move it to a permanent home
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+```
+### Bashrc
+```
+alias update-nvim='curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage && chmod u+x nvim-linux-x86_64.appimage && sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim'
 ```
