@@ -41,3 +41,10 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
+
+-- Folding configuration
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.o.foldcolumn = '0' -- Set to '1' if you want to see a visual fold bar
+vim.o.foldlevel = 99   -- Ensure files open with all folds expanded by default
+vim.o.foldlevelstart = 99
