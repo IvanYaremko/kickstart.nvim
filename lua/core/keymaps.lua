@@ -14,11 +14,13 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- [[ git keymaps ]]
-vim.keymap.set('n', '<leader>ga', ':!git add %<CR>', { desc = 'Git Add Current' })
-vim.keymap.set('n', '<leader>gA', ':!git add .<CR>', { desc = 'Git Add All' })
-vim.keymap.set('n', '<leader>gc', ':!git commit -m "update"<CR>', { desc = 'Git Commit' })
-vim.keymap.set('n', '<leader>gp', ':!git push<CR>', { desc = 'Git Push' })
-
+--vim.keymap.set('n', '<leader>ga', ':!git add %<CR>', { desc = 'Git Add Current' })
+--vim.keymap.set('n', '<leader>gA', ':!git add .<CR>', { desc = 'Git Add All' })
+--vim.keymap.set('n', '<leader>gc', ':!git commit -m "update"<CR>', { desc = 'Git Commit' })
+--vim.keymap.set('n', '<leader>gp', ':!git push<CR>', { desc = 'Git Push' })
+--
+-- gemini sync
+vim.keymap.set('n', '<leader>gr', '<cmd>GeminiSync<CR>', { desc = 'Git [R]efresh AI Context' })
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',

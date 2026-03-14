@@ -32,5 +32,11 @@ return {
 
   -- Statusline & Which-key
   { 'folke/which-key.nvim', event = 'VimEnter', opts = { delay = 0 } },
-  { 'echasnovski/mini.nvim', config = function() require('mini.statusline').setup() end },
+  { 
+    'echasnovski/mini.nvim',
+    config = function() 
+      require('mini.statusline').setup()
+      require('mini.pairs').setup()
+    end 
+  },
 }
