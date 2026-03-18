@@ -16,9 +16,25 @@ return {
           map('grn', vim.lsp.buf.rename, 'Rename')
           map('gra', vim.lsp.buf.code_action, 'Code Action')
           map('grd', require('telescope.builtin').lsp_definitions, 'Definition')
+          vim.api.nvim_create_autocmd('BufWritePre', {
+                buffer = event.buf,
+                callback = function()
+                  vim.lsp.buf.format({ bufnr = event.buf, async = false })
+                end,
+                desc = 'Format on save',
+          })
         end,
       })
 
+      -- Custom hover handler
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, {
+    -- math.floor(vim.o.columns * 0.7) calculates the value at the moment the LSP loads
+    max_width = math.floor(vim.o.columns * 0.7),
+    border = "rounded",
+    focusable = true, -- Allows you to jump into the window with K again
+  }
+)
       -- Turn off the off-screen virtual text
       vim.diagnostic.config({ virtual_text = false })
 
